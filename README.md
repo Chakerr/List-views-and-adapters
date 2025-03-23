@@ -1,32 +1,45 @@
-# Laboratorio List Views and Adapters
+# Aplicación de Mascotas - ListViews y Adapters
+
+## Descripción del Proyecto
+Este proyecto es una aplicación Android diseñada para mejorar la navegabilidad entre distintas categorías utilizando `ListView` y `Adapters`. Su principal objetivo es ofrecer una estructura clara y funcional para gestionar información sobre **mascotas, servicios y tiendas** relacionadas con el cuidado animal.
 
 ## Objetivo
-Comprender los mecanismos disponibles para diseñar la navegabilidad de una aplicación Android mediante el uso de **List Views** y **Adapters**, permitiendo una estructura de navegación eficiente y dinámica dentro de la aplicación.
+El desarrollo de esta aplicación busca fortalecer la comprensión y aplicación de los componentes fundamentales de Android relacionados con la gestión de listas y la navegación entre actividades. Se implementaron `ListView`, `Adapters` personalizados y `Intents` para asegurar una experiencia de usuario fluida.
 
-## Desarrollo
-### Análisis de Navegación
-Se inició el laboratorio con un análisis detallado sobre la navegabilidad en aplicaciones Android, abordando los siguientes aspectos:
-- Evaluación de preguntas clave sobre la estructura de navegación.
-- Revisión de los diferentes patrones de navegación comúnmente utilizados.
-- Identificación de las mejores prácticas para una experiencia de usuario óptima.
+## Estructura del Proyecto
+El proyecto se compone de las siguientes actividades y adaptadores:
 
-### Propuesta de Navegación
-Con base en el análisis previo, se elaboró una propuesta de navegación específica para la aplicación del proyecto, siguiendo una arquitectura basada en tres tipos de actividades:
-- **Actividades de Nivel Superior:** Representan el punto de entrada a la aplicación y contienen las opciones principales de navegación.
-- **Actividades de Categoría:** Permiten al usuario navegar a través de listas de elementos organizados por categorías.
-- **Actividades de Detalle/Edición:** Muestran información detallada sobre un elemento seleccionado y permiten su edición o consulta.
+### 1. `TopLevelActivity` (Pantalla Principal)
+- Contiene un `ListView` con tres categorías principales:
+  - **Mascotas**
+  - **Servicios**
+  - **Tiendas**
+- Al seleccionar una categoría, se abre la actividad correspondiente mediante un `Intent`.
 
-### Implementación
-Para la implementación de la navegación en la aplicación, se llevaron a cabo los siguientes pasos:
-1. **Creación de la actividad principal:** Se estableció una pantalla de inicio con un menú de opciones basado en un ListView.
-2. **Uso de List Views:** Se implementaron listas interactivas que permiten la navegación entre distintas secciones de la aplicación.
-3. **Empleo de Adapters:** Se utilizaron adapters para manejar los datos de las listas de manera dinámica, asegurando flexibilidad en la visualización de la información.
-4. **Configuración de Intents:** Se programaron intents para realizar la transición entre actividades, garantizando una navegación fluida.
-5. **Manejo de eventos:** Se implementaron listeners para capturar la interacción del usuario con los elementos de la interfaz.
+### 2. `MascotaCategoryActivity` (Lista de Mascotas)
+- Implementa un `ListView` con nombres de distintas mascotas.
+- Se utiliza un `Adapter` personalizado (`MascotaAdapter`) para mostrar imágenes y descripciones.
+- Al seleccionar un elemento, se navega a `DetalleMascotaActivity` para ver más detalles.
 
-### Resultados Obtenidos
-- Se logró una navegación estructurada y funcional dentro de la aplicación.
-- Se implementó correctamente el uso de List Views y Adapters para gestionar la visualización de datos.
-- Se optimizó la experiencia del usuario al permitir una navegación intuitiva y accesible.
-- Se fortalecieron los conocimientos sobre la integración de componentes de navegación en Android.
+### 3. `ServiciosCategoryActivity` (Lista de Servicios)
+- Contiene un `ListView` con diferentes servicios para mascotas (veterinarias, paseadores, guarderías).
+- Se emplea un `ArrayAdapter` estándar para manejar la lista.
+- Se configuró la navegación a `DetalleServicioActivity` para mostrar información más detallada.
+
+### 4. `TiendasCategoryActivity` (Lista de Tiendas)
+- Presenta un `ListView` con tiendas especializadas en productos para mascotas.
+- Se implementó la navegación a `DetalleTiendaActivity` para ver información sobre cada tienda.
+
+### 5. Adaptadores Personalizados
+- **`MascotaAdapter`**: Maneja la visualización de imágenes, nombres y descripciones de mascotas dentro de la lista.
+- **`CategoriaAdapter`**: Se usa en las listas de Servicios y Tiendas para manejar la presentación de los elementos.
+
+## Funcionalidad General
+1. **Inicio en `TopLevelActivity`**: El usuario selecciona una categoría.
+2. **Navegación a la actividad correspondiente** (`MascotaCategoryActivity`, `ServiciosCategoryActivity` o `TiendasCategoryActivity`).
+3. **Selección de un elemento dentro de la lista**, lo que lleva a la actividad de detalles específica.
+4. **Visualización de información detallada** en `DetalleMascotaActivity`, `DetalleServicioActivity` o `DetalleTiendaActivity`.
+
+## Conclusión
+Este proyecto permitió reforzar conocimientos clave en el desarrollo de aplicaciones Android, como la gestión de `ListView`, el uso de `Adapters` personalizados y la navegación entre actividades. Se logró una aplicación funcional que facilita la exploración de información sobre mascotas, servicios y tiendas mediante una interfaz intuitiva y bien estructurada.
 
