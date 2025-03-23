@@ -13,10 +13,22 @@
         android:theme="@style/Theme.StarbuzzApp"
         tools:targetApi="31">
         <activity
-            android:name=".DrinkActivity"
+            android:name=".TiendasCategoryActivity"
             android:exported="false" />
         <activity
-            android:name=".DrinkCategoryActivity"
+            android:name=".ServiciosCategoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DetalleMascotaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DetalleServicioActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DetalleTiendaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MascotaCategoryActivity"
             android:exported="false" />
         <activity
             android:name=".TopLevelActivity"
