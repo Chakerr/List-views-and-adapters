@@ -1,4 +1,4 @@
-package unipiloto.edu.laboratoriolistviewsandadapters;
+package unipiloto.edu.starbuzzapp;
 
 import org.junit.Test;
 

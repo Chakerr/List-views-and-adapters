@@ -1,4 +1,4 @@
-package unipiloto.edu.laboratoriolistviewsandadapters;
+package unipiloto.edu.starbuzzapp;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("unipiloto.edu.laboratoriolistviewsandadapters", appContext.getPackageName());
+        assertEquals("unipiloto.edu.starbuzzapp", appContext.getPackageName());
     }
 }

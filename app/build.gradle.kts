@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "unipiloto.edu.laboratoriolistviewsandadapters"
+    namespace = "unipiloto.edu.starbuzzapp"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "unipiloto.edu.laboratoriolistviewsandadapters"
+        applicationId = "unipiloto.edu.starbuzzapp"
         minSdk = 24
         targetSdk = 35
         versionCode = 1

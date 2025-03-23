@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Laboratorio List views and adapters"
+rootProject.name = "StarbuzzApp"
 include(":app")
